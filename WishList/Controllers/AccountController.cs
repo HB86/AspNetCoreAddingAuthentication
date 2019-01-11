@@ -75,7 +75,7 @@ namespace WishList.Controllers
 
             }
 
-            return RedirectToAction("Index, HomeController");
+            return RedirectToAction("Index", "HomeController");
 
 
         }
