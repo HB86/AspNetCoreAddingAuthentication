@@ -55,6 +55,7 @@ namespace WishList.Controllers
             }
 
 
+
             var user = new ApplicationUser()
             {
                 UserName = model.UserName,
@@ -62,11 +63,11 @@ namespace WishList.Controllers
 
             };
 
-            var result =_userManager.CreateAsync(user, model.Password);
+            var result =_userManager.CreateAsync(user, model.Password).Result;
 
-            if (!result.IsCompletedSuccessfully)
+            if (!result.Succeeded)
             {
-                foreach(var error in result.Result.Errors)
+                foreach(var error in result.Errors)
                 {
                     ModelState.AddModelError("Password", error.Description);
                     return View(model);
@@ -75,7 +76,7 @@ namespace WishList.Controllers
 
             }
 
-            return RedirectToAction("Index", "HomeController");
+            return RedirectToAction("Index", "Home");
 
 
         }
