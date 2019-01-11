@@ -100,7 +100,7 @@ namespace WishList.Controllers
     [HttpPost]
     [AllowAnonymous]
     [ValidateAntiForgeryToken]
-    public IActionResult Login(LogInViewModel model)
+    public IActionResult Login(LoginViewModel model)
     {
 
             if (!ModelState.IsValid)

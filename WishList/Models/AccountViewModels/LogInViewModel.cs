@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WishList.Models.AccountViewModels
 {
-    public class LogInViewModel
+    public class LoginViewModel
     {
         [Required]
         [EmailAddress]
