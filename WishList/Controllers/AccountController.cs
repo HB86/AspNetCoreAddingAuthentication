@@ -69,7 +69,7 @@ namespace WishList.Controllers
                 foreach(var error in result.Result.Errors)
                 {
                     ModelState.AddModelError("Password", error.Description);
-                    return View();
+                    return View(model);
 
                 }
 
