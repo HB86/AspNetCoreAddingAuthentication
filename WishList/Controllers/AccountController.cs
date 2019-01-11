@@ -28,6 +28,20 @@ namespace WishList.Controllers
 
         }
 
+
+    [HttpGet]
+    [AllowAnonymous]
+    public IActionResult Register()
+        {
+
+
+            return View();
+
+
+        }
+
+
+
     [HttpPost]
     [AllowAnonymous]
     public IActionResult Register(RegisterViewModel model)
@@ -55,6 +69,7 @@ namespace WishList.Controllers
                 foreach(var error in result.Result.Errors)
                 {
                     ModelState.AddModelError("Password", error.Description);
+                    return View();
 
                 }
 
