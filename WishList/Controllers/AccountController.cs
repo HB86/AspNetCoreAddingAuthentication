@@ -119,12 +119,13 @@ namespace WishList.Controllers
             {
 
                 ModelState.AddModelError(string.Empty, "Invalid Login Attempt");
+                return View();
 
 
             }
 
 
-            return RedirectToAction("Item", "Index");
+            return RedirectToAction("Index", "Home");
 
 
 
