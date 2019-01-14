@@ -4,17 +4,23 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace WishList.Models.AccountViewModels
+namespace WishList.Models
 {
     public class LoginViewModel
     {
-        [Required]
-        [EmailAddress]
-        public string Email{ get; set; }
 
-        [Required]
-        [DataType(DataType.Password)]
-        public string Password { get; set; }
+       
+      [Required]
+      [EmailAddress]
+      public string Email { get; set; }
+
+
+      [Required]
+      [DataType(DataType.Password)]
+      public string Password { get; set; }
+
+        
+
 
     }
 }
