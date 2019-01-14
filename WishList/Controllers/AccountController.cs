@@ -125,7 +125,7 @@ namespace WishList.Controllers
             }
 
 
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index", "Item");
 
 
 
@@ -138,7 +138,7 @@ namespace WishList.Controllers
 
             _signInManager.SignOutAsync();
 
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index", "Item");
 
 
 
