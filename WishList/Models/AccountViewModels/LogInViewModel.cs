@@ -8,6 +8,7 @@ namespace WishList.Models.AccountViewModels
 {
     public class LoginViewModel
     {
+
         [Required]
         [EmailAddress]
         public string Email { get; set; }
@@ -15,7 +16,6 @@ namespace WishList.Models.AccountViewModels
         [Required]
         [DataType(DataType.Password)]
         public string Password { get; set; }
-
 
     }
 }
