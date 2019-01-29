@@ -92,7 +92,6 @@ namespace WishList.Controllers
 
         return View();
 
-
     }
 
 
@@ -109,7 +108,6 @@ namespace WishList.Controllers
                 return View(model);
 
             }
-
 
 
             var loginResult = _signInManager.PasswordSignInAsync(model.Email, model.Password, false, false).Result;
